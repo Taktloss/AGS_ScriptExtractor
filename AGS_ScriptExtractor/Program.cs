@@ -14,7 +14,7 @@ namespace AGS_ScriptExtractor
             if (args.Length >= 1)
             {
                 string filename = args[0];
-                Console.WriteLine("Adventure Game Studio Script Extractor by Taktloss");
+                Console.WriteLine("AGS Script Extractor v0.2 by Taktloss");
                 ParseAGSFile(filename);
                 Console.ReadKey();
             }
@@ -24,7 +24,7 @@ namespace AGS_ScriptExtractor
 
         static void printHelp()
         {
-            Console.WriteLine("Extractor needs a argument.");
+            Console.WriteLine("Extractor needs a AGS Game File as argument.");
             Console.WriteLine(Path.GetFileName(System.Reflection.Assembly.GetEntryAssembly().Location) +
                     " <AGS GAME EXE>");
         }
