@@ -76,10 +76,8 @@ namespace AGS
                     sData = Regex.Replace(sData, "__[A-Z]+.+(.ash)", "");
                     sData = Regex.Replace(sData, @"^\s+[\r\n]", "", RegexOptions.Multiline);
                     sData = Regex.Replace(sData, @"[\n\r]", "\r\n", RegexOptions.Multiline);
-                    sData = sData.Replace("__NEWSCRIPT", "//__NEWSCRIPT");
+                    //sData = sData.Replace("__NEWSCRIPT", "//__NEWSCRIPT");
 
-
-                    //lines.Add(Encoding.ASCII.GetString(newTestData));
                     lines.Add(sData);
                 }
                 Console.WriteLine("Found " + lines.Count + " entrys.");
