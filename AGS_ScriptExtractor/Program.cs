@@ -33,7 +33,7 @@ namespace AGS_ScriptExtractor
         {
             using (FileStream fs = new FileStream(filename, FileMode.Open))
             {
-                Console.WriteLine("Start extracting scripts from " + filename);
+                Console.WriteLine("Start extracting scripts from " + Path.GetFileName(filename));
 
                 //The string we want to search in the AGS Game executable
                 const string searchString = "SCOMY";
@@ -93,10 +93,10 @@ namespace AGS_ScriptExtractor
                     
                     lines.Add(Encoding.ASCII.GetString(newTestData));
                 }
-                //Write Text List to a txt file
                 Console.WriteLine("Found " + lines.Count + " entrys.");
-                Console.WriteLine("Script extracted to " + filename + "txt");
+                //Write Text List to a txt file
                 File.WriteAllLines(filename + ".txt", lines);
+                Console.WriteLine("Script extracted to " + Path.GetFileName(filename) + ".txt");
             }
         }
 
