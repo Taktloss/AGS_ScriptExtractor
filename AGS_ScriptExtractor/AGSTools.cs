@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AGS
@@ -71,8 +72,15 @@ namespace AGS
                     byte[] testData = br.ReadBytes(scriptLength);
                     //Replace 0x00 with 0x0D0A0D0A = two line breaks
                     byte[] newTestData = Replace(testData, new byte[] { 0x00 }, new byte[] { 0x0D, 0x0A, 0x0D, 0x0A });
+                    string sData = Encoding.ASCII.GetString(newTestData);
+                    sData = Regex.Replace(sData, "__[A-Z]+.+(.ash)", "");
+                    sData = Regex.Replace(sData, @"^\s+[\r\n]", "", RegexOptions.Multiline);
+                    sData = Regex.Replace(sData, @"[\n\r]", "\r\n", RegexOptions.Multiline);
+                    sData = sData.Replace("__NEWSCRIPT", "//__NEWSCRIPT");
 
-                    lines.Add(Encoding.ASCII.GetString(newTestData));
+
+                    //lines.Add(Encoding.ASCII.GetString(newTestData));
+                    lines.Add(sData);
                 }
                 Console.WriteLine("Found " + lines.Count + " entrys.");
                 //Write Text List to a trs file
