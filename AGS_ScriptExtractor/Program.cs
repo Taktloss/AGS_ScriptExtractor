@@ -96,7 +96,6 @@ namespace AGS_ScriptExtractor
             }
 
             List<byte> result = new List<byte>();
-
             int i;
 
             for (i = 0; i <= input.Length - pattern.Length; i++)
