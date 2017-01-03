@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die einer Assembly zugeordnet sind.
-[assembly: AssemblyTitle("AGS_ScriptExtractor")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Adventure Game Studio Script Extractor")]
+[assembly: AssemblyDescription("Extracts the Text for translations from AGS Games")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("AGS_ScriptExtractor")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCompany("Takti")]
+[assembly: AssemblyProduct("AGS ScriptExtractor")]
+[assembly: AssemblyCopyright("Copyright © Taktloss 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
