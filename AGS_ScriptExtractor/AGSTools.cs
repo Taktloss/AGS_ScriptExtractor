@@ -76,8 +76,8 @@ namespace AGS
                 }
                 Console.WriteLine("Found " + lines.Count + " entrys.");
                 //Write Text List to a trs file
-                File.WriteAllLines(filename + ".trs", lines);
-                Console.WriteLine("Script extracted to " + Path.GetFileName(filename) + ".trs");
+                File.WriteAllLines(Path.ChangeExtension(filename, ".trs"), lines);
+                Console.WriteLine("Script extracted to " + Path.ChangeExtension(filename,".trs"));
             }
         }
 
